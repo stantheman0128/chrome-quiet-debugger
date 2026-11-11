@@ -4,9 +4,9 @@
 
 Hides Chrome's "started debugging this browser" infobar by launching Chrome with `--silent-debugger-extension-api`. It does not patch the Chrome binary or open a remote debugging port.
 
-![Before: the infobar says '"Claude" started debugging this browser'. After: the bar is gone once --silent-debugger-extension-api is added.](docs/before-after.png)
+![Before (Claude) and Before (ChatGPT / OpenAI) show the "started debugging this browser" infobar. After adding --silent-debugger-extension-api, the bar is gone.](docs/before-after.png)
 
-These are real Chrome screenshots. The bar was reproduced with a demo extension named "Claude", not the official Anthropic extension.
+These are real Chrome screenshots (English UI). The bars were reproduced with demo extensions named "Claude" and "ChatGPT", not the official Anthropic or OpenAI extensions. OpenAI's official extension display name is [ChatGPT](https://chromewebstore.google.com/detail/chatgpt/hehggadaopoacecdllhhajmbjkdcmajg), not Codex.
 
 The flag hides the bar for **every** extension that uses the debugger API, not only one agent. Use it only if you trust your installed extensions. Do not use it on a shared or managed machine.
 

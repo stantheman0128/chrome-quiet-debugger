@@ -52,11 +52,11 @@ macOS 無法改掉「點連結時啟動 Chrome」這條路。如果 Chrome 已�
 
 ## 關於這些截圖
 
-[使用前／使用後的對照圖](before-after.png) 和下面這張 `chrome://version` 畫面，都是用官方 Google Chrome 156.0.8078.47（正式版本，Linux x86_64、繁體中文介面）拍的。用的是臨時設定檔，以及名稱設成「Claude」的示範擴充功能，用來重現官方擴充功能會出現的提示條；這不是 Anthropic 的原版擴充功能，也沒有登入帳號。畫面上的文案是「『Claude』已開始為這個瀏覽器偵錯」，右側有「取消」。這和官方 [Claude](https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn) 擴充功能（Chrome 線上應用程式商店標題與顯示名稱都是 Claude）觸發時看到的名稱一致。英文介面大致是 `"Claude" started debugging this browser`，右側有 `Cancel`。
+[使用前／使用後的對照圖](before-after.png) 是用官方 Google Chrome 156.0.8078.47（正式版本，Linux x86_64、英文介面）拍的，臨時設定檔，沒有登入帳號。圖中是名稱設成「Claude」和「ChatGPT」的示範擴充功能，用來重現官方擴充功能會出現的提示條，並不是 Anthropic 或 OpenAI 的原版擴充功能。畫面上的文案是 `"Claude" started debugging this browser` 與 `"ChatGPT" started debugging this browser`，右側有 `Cancel`。
 
-OpenAI 那邊，官方商店與目前 manifest 的顯示名稱是 [ChatGPT](https://chromewebstore.google.com/detail/chatgpt/hehggadaopoacecdllhhajmbjkdcmajg)（`"name": "ChatGPT"`），提示條會顯示「ChatGPT」，不是「Codex」或「OpenAI」。較早的 Codex 桌面版外掛，有使用者回報過看到 `"Codex"`，但現行商店版本不是這個名稱。同一個視窗同時只會出現一條偵錯提示，所以對照圖只拍 Claude。實際使用時，名稱會依你安裝的擴充功能而變。
+這兩個名稱和官方商店的顯示名稱一致：Anthropic 的是 [Claude](https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn)，OpenAI 的是 [ChatGPT](https://chromewebstore.google.com/detail/chatgpt/hehggadaopoacecdllhhajmbjkdcmajg)（manifest 為 `"name": "ChatGPT"`），不是 Codex。較早的 Codex 桌面版外掛，有使用者回報過看到 `"Codex"`，但現行商店版本不是這個名稱。同一個視窗同時只會出現一條偵錯提示，所以 Before 分成兩張拍。實際使用時，名稱會依你安裝的擴充功能而變。
 
-在 `chrome://version` 的「命令列」裡，應該看得到 `--silent-debugger-extension-api`：
+在 `chrome://version` 的「命令列」裡，應該看得到 `--silent-debugger-extension-api`。下面這張是稍早拍的（介面為繁體中文），重點是命令列裡有這個參數：
 
 ![chrome://version 的命令列包含 --silent-debugger-extension-api](version.png)
 

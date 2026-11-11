@@ -52,11 +52,11 @@ The infobar is how Chrome tells you that an extension is controlling the browser
 
 ## About these screenshots
 
-The [before/after comparison](before-after.png) and the `chrome://version` image below were taken with official Google Chrome 156.0.8078.47 (stable, Linux x86_64, Traditional Chinese UI), on a throwaway profile, using a demo extension named "Claude" to reproduce the real infobar. It is not the official Anthropic extension, and no account was signed in. The zh-TW banner text is 「『Claude』已開始為這個瀏覽器偵錯」, with 取消 on the right. That matches the display name of the official [Claude](https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn) extension (the Chrome Web Store title and the name shown in the bar are both "Claude"). The English UI is roughly `"Claude" started debugging this browser`, with Cancel.
+The [before/after comparison](before-after.png) was taken with official Google Chrome 156.0.8078.47 (stable, Linux x86_64, English UI), on a throwaway profile, with no account signed in. The bars were reproduced with demo extensions named "Claude" and "ChatGPT", not the official Anthropic or OpenAI extensions. The banner text is `"Claude" started debugging this browser` and `"ChatGPT" started debugging this browser`, with Cancel on the right.
 
-On the OpenAI side, the official store listing and current manifest display name are [ChatGPT](https://chromewebstore.google.com/detail/chatgpt/hehggadaopoacecdllhhajmbjkdcmajg) (`"name": "ChatGPT"`), so the bar would say "ChatGPT", not "Codex" or "OpenAI". Some earlier reports of the Codex desktop plugin mentioned a `"Codex"` banner, but that is not the current Web Store name. Chrome shows only one debugger infobar in a window at a time, so the comparison shot uses Claude only. The name you see depends on the extension you actually have installed.
+Those names match the official store listings: Anthropic's [Claude](https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn), and OpenAI's [ChatGPT](https://chromewebstore.google.com/detail/chatgpt/hehggadaopoacecdllhhajmbjkdcmajg) (`"name": "ChatGPT"`), not Codex. Some earlier reports of the Codex desktop plugin mentioned a `"Codex"` banner, but that is not the current Web Store name. Chrome shows only one debugger infobar in a window at a time, so the Before shots were taken separately. The name you see depends on the extension you actually have installed.
 
-The Command Line on `chrome://version` should contain `--silent-debugger-extension-api`:
+The Command Line on `chrome://version` should contain `--silent-debugger-extension-api`. The image below is from an earlier shot (Traditional Chinese UI); the point is that the flag is present on the Command Line:
 
 ![The chrome://version command line contains --silent-debugger-extension-api](version.png)
 

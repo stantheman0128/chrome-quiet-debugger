@@ -4,9 +4,9 @@
 
 把 Chrome 那條「已開始為這個瀏覽器偵錯」提示藏起來。作法是讓 Chrome 啟動時帶上 `--silent-debugger-extension-api`。不會修改 Chrome 程式檔，也不會開啟遠端偵錯連接埠。
 
-![Before：提示條寫著「Claude」已開始為這個瀏覽器偵錯。After：加上 --silent-debugger-extension-api 後提示條消失。](docs/before-after.png)
+![Before (Claude) 與 Before (ChatGPT / OpenAI) 會出現 "started debugging this browser" 提示條；加上 --silent-debugger-extension-api 後提示條消失。](docs/before-after.png)
 
-實際截圖。用名稱設成「Claude」的示範擴充功能，重現官方 [Claude](https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn) 擴充功能會出現的那條提示，並不是 Anthropic 的原版擴充功能。
+實際截圖，Chrome 英文介面。用名稱設成「Claude」和「ChatGPT」的示範擴充功能，重現官方擴充功能會出現的提示條，並不是 Anthropic 或 OpenAI 的原版擴充功能。OpenAI 官方擴充功能的顯示名稱是 [ChatGPT](https://chromewebstore.google.com/detail/chatgpt/hehggadaopoacecdllhhajmbjkdcmajg)，不是 Codex。
 
 加上這個參數後，**所有**使用偵錯 API 的擴充功能都不會再顯示這條提示。請先確認你安裝的擴充功能都信得過；共用或公司管理的電腦不要用。
 
