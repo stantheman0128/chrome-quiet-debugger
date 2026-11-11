@@ -4,7 +4,9 @@
 
 Hides Chrome's "started debugging this browser" infobar by launching Chrome with `--silent-debugger-extension-api`. It does not patch the Chrome binary or open a remote debugging port.
 
-![Before: the infobar is visible. After: it is gone.](docs/before-after.png)
+![Before: the infobar says '"Claude" started debugging this browser'. After: the bar is gone once --silent-debugger-extension-api is added.](docs/before-after.png)
+
+These are real Chrome screenshots. The bar was reproduced with a demo extension named "Claude", not the official Anthropic extension.
 
 The flag hides the bar for **every** extension that uses the debugger API, not only one agent. Use it only if you trust your installed extensions. Do not use it on a shared or managed machine.
 

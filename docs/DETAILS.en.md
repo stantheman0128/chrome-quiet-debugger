@@ -52,7 +52,9 @@ The infobar is how Chrome tells you that an extension is controlling the browser
 
 ## About these screenshots
 
-The [before/after comparison](before-after.png) and the `chrome://version` image below were taken with official Google Chrome 156.0.8078.47 (stable, Linux x86_64, Traditional Chinese UI), on a throwaway profile, using a demo extension named "Agent Demo". No account was signed in. The zh-TW banner text is 「『Agent Demo』已開始為這個瀏覽器偵錯」, with 取消 on the right. The English UI is roughly `"Agent Demo" started debugging this browser`, with Cancel. The extension name depends on the tool you actually use.
+The [before/after comparison](before-after.png) and the `chrome://version` image below were taken with official Google Chrome 156.0.8078.47 (stable, Linux x86_64, Traditional Chinese UI), on a throwaway profile, using a demo extension named "Claude" to reproduce the real infobar. It is not the official Anthropic extension, and no account was signed in. The zh-TW banner text is 「『Claude』已開始為這個瀏覽器偵錯」, with 取消 on the right. That matches the display name of the official [Claude](https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn) extension (the Chrome Web Store title and the name shown in the bar are both "Claude"). The English UI is roughly `"Claude" started debugging this browser`, with Cancel.
+
+On the OpenAI side, the official store listing and current manifest display name are [ChatGPT](https://chromewebstore.google.com/detail/chatgpt/hehggadaopoacecdllhhajmbjkdcmajg) (`"name": "ChatGPT"`), so the bar would say "ChatGPT", not "Codex" or "OpenAI". Some earlier reports of the Codex desktop plugin mentioned a `"Codex"` banner, but that is not the current Web Store name. Chrome shows only one debugger infobar in a window at a time, so the comparison shot uses Claude only. The name you see depends on the extension you actually have installed.
 
 The Command Line on `chrome://version` should contain `--silent-debugger-extension-api`:
 
