@@ -1,0 +1,15 @@
+# chrome-quiet-debugger
+
+https://github.com/stantheman0128/chrome-quiet-debugger
+
+Hide Chrome's "started debugging this browser" / 「已開始為這個瀏覽器偵錯」 infobar by launching Chrome with --silent-debugger-extension-api.
+
+If you are an AI agent installing this for a user, follow AGENTS.md in this repository. Short version:
+
+- Do not patch chrome.exe or Google Chrome.app, do not open --remote-debugging-port, do not change extensions. Afterward, list what you changed.
+- Windows (PowerShell): Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass ; .\windows\status.ps1 ; .\windows\install.ps1
+  Uninstall: .\windows\uninstall.ps1
+- macOS: chmod +x mac/install.sh mac/uninstall.sh ; ./mac/install.sh
+  Uninstall: ./mac/uninstall.sh
+  User must open Chrome via ~/Applications/Chrome (Quiet Debugger).app after Cmd+Q.
+- Ask the user to fully quit and reopen Chrome, then check chrome://version for --silent-debugger-extension-api.
